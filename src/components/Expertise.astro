@@ -1,0 +1,39 @@
+---
+import ExperienceItem from "./ExpertiseItem.astro"
+const EXPERIENCIE = [
+  {
+    date: "Currently",
+    title: "Principal Big Data Engineer",
+    company: "Mecalux S.A.",
+    description: "As a Senior Data Engineer, I lead a team of talented professionals, providing value in obtaining customer insights and developing algorithms for controlling logistic robots."
+  },
+  {
+    date: "December 2020",
+    title: "Data Engineer",
+    company: "Accenture",
+    description: "Started my journey in the data world, working on supply planning projects, focusing mainly on algorithm development and forecasting."
+  },
+  {
+    date: "October 2018",
+    title: "Principal IT Consultant",
+    company: "Asturias Dolor S.L.",
+    description: "While digitizing the company, I received the opportunity to lead a small IT department where I developed several projects related to the healthcare industry and the web stack."
+  },
+  {
+    date: "June 2017",
+    title: "Web Developer",
+    company: "Iricom",
+    description: "Developing a CMS, I started my professional life using Microsoft stack technologies."
+  },
+]
+---
+
+<ol class="relative mt-16">
+  {
+    EXPERIENCIE.map((experiencie) => (
+      <li class="">
+        <ExperienceItem {...experiencie} />
+      </li>
+    ))
+  }
+</ol>
