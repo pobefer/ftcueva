@@ -1,39 +1,65 @@
 ---
 import GitHub from "./Icons/GitHub.astro"
+import Python from "./Icons/Python.astro"
+import Chatbot from "./Icons/Chatbot.astro"
 import NextJS from "./Icons/NextJS.astro"
 import Tailwind from "./Icons/Tailwind.astro"
+import AstroSVG from "./Icons/AstroSVG.astro"
 import Link from "./Icons/Link.astro"
 import LinkButton from "./LinkButton.astro"
 
 const TAGS = {
-  NEXT: {
-    name: "Next.js",
+  PYTHON: {
+    name: "Python",
     class: "bg-black text-white",
+    icon: Python,
+  },
+  CHATBOT: {
+    name: "Chatbot",
+    class: "bg-[#003159] text-white",
+    icon: Chatbot,
+  },
+  NEXTJS: {
+    name: "NextJS",
+    class: "bg-[#003159] text-white",
     icon: NextJS,
   },
   TAILWIND: {
-    name: "Tailwind CSS",
+    name: "Tailwind css",
     class: "bg-[#003159] text-white",
     icon: Tailwind,
   },
+  ASTRO: {
+    name: "Astro",
+    class: "bg-[#003159] text-white",
+    icon: AstroSVG,
+  },
 }
 const PROJECTS = [
-  {
-    title: "JARVIS - IA Asistente Virtual controlada por voz",
+{
+    title: "Portfolio - Personal website",
     description:
-      "Proyecto personal de un asistente virtual controlado por voz. Creado con Python y librerías como pyttsx3, speech_recognition y pywhatkit.",
+      "Personal website created with Astro, Tailwind CSS and hosted on Vercel. It includes a blog and a portfolio section.",
+    link: "#",
+    image: "/ftcueva/portfolio.webp",
+    tags: [TAGS.ASTRO, TAGS.TAILWIND],
+  },
+  {
+    title: "JARVIS - IA Voice Asistant ",
+    description:
+      "Personal voice assistant created with Python and libraries like pyttsx3, speech_recognition and pywhatkit.",
     link: "#",
     github: "#",
     image: "/ftcueva/voz.webp",
-    tags: [TAGS.NEXT, TAGS.TAILWIND],
+    tags: [TAGS.PYTHON, TAGS.CHATBOT],
   },
   {
-    title: "JARVIS2 - IA Asistente Virtual de escritorio",
+    title: "JARVIS2 - IA Desktop Asistant",
     description:
-      "Asistente virtual de comandos de voz y texto. Creado con Python y librerías como pyttsx3, speech_recognition y pywhatkit.",
+      "Personal desktop assistant created with Python and libraries like pyttsx3, speech_recognition and pywhatkit.",
     link: "#",
     image: "/ftcueva/comandos.webp",
-    tags: [TAGS.NEXT, TAGS.TAILWIND],
+    tags: [TAGS.PYTHON, TAGS.CHATBOT],
   },
 ]
 ---
