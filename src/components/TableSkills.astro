@@ -1,0 +1,123 @@
+---
+import Python from "./Icons/Python.astro"
+import Chatbot from "./Icons/Chatbot.astro"
+import NextJS from "./Icons/NextJS.astro"
+import Tailwind from "./Icons/Tailwind.astro"
+import AstroSVG from "./Icons/AstroSVG.astro"
+
+const TAGS = {
+  PYTHON: {
+    name: "Python",
+    class: "bg-black text-white",
+    icon: Python,
+  },
+  CHATBOT: {
+    name: "Chatbot",
+    class: "bg-[#003159] text-white",
+    icon: Chatbot,
+  },
+  NEXTJS: {
+    name: "NextJS",
+    class: "bg-[#003159] text-white",
+    icon: NextJS,
+  },
+  TAILWIND: {
+    name: "Tailwind css",
+    class: "bg-[#003159] text-white",
+    icon: Tailwind,
+  },
+  ASTRO: {
+    name: "Astro",
+    class: "bg-[#003159] text-white",
+    icon: AstroSVG,
+  },
+}
+
+const tableElements = [
+    {
+        tag: TAGS.PYTHON,
+        level_1: "X",
+        level_2: "X",
+        level_3: "X",
+        level_4: "",
+        level_5: "",
+    },
+    {
+        tag: TAGS.ASTRO,
+        level_1: "X",
+        level_2: "X",
+        level_3: "X",
+        level_4: "X",
+        level_5: "",
+    },
+    {
+        tag: TAGS.TAILWIND,
+        level_1: "X",
+        level_2: "X",
+        level_3: "",
+        level_4: "",
+        level_5: "",
+    },
+    {
+        tag: TAGS.CHATBOT,
+        level_1: "X",
+        level_2: "X",
+        level_3: "X",
+        level_4: "X",
+        level_5: "X",
+    }
+]
+
+
+---
+<table class="min-w-full divide-y divide-gray-200">
+    <thead>
+        <tr>
+            <th class="px-6 py-3 bg-gray-50 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
+                Technology
+            </th>
+            <th class="px-6 py-3 bg-gray-50 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
+                Beginner
+            </th>
+            <th class="px-6 py-3 bg-gray-50 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
+                Intermediate
+            </th>
+            <th class="px-6 py-3 bg-gray-50 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
+                Advanced
+            </th>
+            <th class="px-6 py-3 bg-gray-50 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
+                Proficiency
+            </th>
+            <th class="px-6 py-3 bg-gray-50 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
+                Expert
+            </th>
+        </tr>
+    </thead>
+    <tbody>
+        {tableElements.map((element) => (
+        <tr>
+            <td>
+                <span class={`flex items-center gap-x-2 rounded-full text-xs ${element.tag.class} py-1 px-2`}>
+                    <element.tag.icon class="w-4 h-4" />
+                    {element.tag.name}
+                </span>
+            </td>
+            <td class="px-6 py-4 whitespace-nowrap">
+                {element.level_1}
+            </td>
+            <td class="px-6 py-4 whitespace-nowrap">
+                {element.level_2}
+            </td>
+            <td class="px-6 py-4 whitespace-nowrap">
+                {element.level_3}
+            </td>
+            <td class="px-6 py-4 whitespace-nowrap">
+                {element.level_4}
+            </td>
+            <td class="px-6 py-4 whitespace-nowrap">
+                {element.level_5}
+            </td>
+        </tr>
+        ))}
+    </tbody>
+</table>
