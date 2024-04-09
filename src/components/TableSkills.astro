@@ -36,21 +36,26 @@ const TAGS = {
 const tableElements = [
     {
         tag: TAGS.PYTHON,
-        level_1: "X",
-        level_2: "X",
-        level_3: "X",
-        level_4: "",
-        level_5: "",
+        level: "Expert",
     },
     {
         tag: TAGS.ASTRO,
-        level_1: "X",
-        level_2: "X",
-        level_3: "X",
-        level_4: "X",
-        level_5: "",
-    }
-
+        level: "Advanced",
+    },
+    {
+        tag: TAGS.NEXTJS,
+        level: "Advanced",
+    },
+    {
+        tag: TAGS.CHATBOT,
+        level: "Advanced",
+    },
+    {
+        tag: TAGS.TAILWIND,
+        level: "Advanced",
+    },
+    
+]
 
 ---
 <table class="min-w-full divide-y divide-gray-200">
@@ -60,19 +65,7 @@ const tableElements = [
                 Technology
             </th>
             <th class="px-6 py-3 bg-gray-50 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
-                Beginner
-            </th>
-            <th class="px-6 py-3 bg-gray-50 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
-                Intermediate
-            </th>
-            <th class="px-6 py-3 bg-gray-50 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
-                Advanced
-            </th>
-            <th class="px-6 py-3 bg-gray-50 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
-                Proficiency
-            </th>
-            <th class="px-6 py-3 bg-gray-50 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
-                Expert
+                Level
             </th>
         </tr>
     </thead>
@@ -81,24 +74,12 @@ const tableElements = [
         <tr>
             <td>
                 <span class={`flex items-center gap-x-2 rounded-full text-xs ${element.tag.class} py-1 px-2`}>
-                    <element.tag.icon class="w-4 h-4" />
+                    <element.tag.icon class="w-6 h-6" />
                     {element.tag.name}
                 </span>
             </td>
             <td class="px-6 py-4 whitespace-nowrap text-center text-yellow-500">
-                {element.level_1}
-            </td>
-            <td class="px-6 py-4 whitespace-nowrap text-center text-yellow-500">
-                {element.level_2}
-            </td>
-            <td class="px-6 py-4 whitespace-nowrap text-center text-yellow-500">
-                {element.level_3}
-            </td>
-            <td class="px-6 py-4 whitespace-nowrap text-center text-yellow-500">
-                {element.level_4}
-            </td>
-            <td class="px-6 py-4 whitespace-nowrap text-center text-yellow-500">
-                {element.level_5}
+                {element.level}
             </td>
         </tr>
         ))}
